@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  db:
+   extends:
+     file: docker-compose.storages.yml
+     service: db
+  redis:
+    extends:
+      file: docker-compose.storages.yml
+      service: redis
+  app:
+    build:
+      context: ../
+      dockerfile: _docker/app/Dockerfile
+    restart: always
+    depends_on:
+      - db
+      - redis
+    command: bash -c "yarn run build && yarn run typeorm:prod migration:run && yarn run start:prod"
+    ports:
+      - ${APP_PORT}:3000
+    volumes:
+      - ${APP_VOLUME}:/app
+    environment:
+      TYPEORM_HOST: db
+      REDIS_HOST: redis
