@@ -1,4 +1,4 @@
-import './_env';
+import 'dotenv/config';
 import { NestFactory } from '@nestjs/core';
 import { ValidationPipe } from '@nestjs/common';
 import { ApiModule } from '../api.module';

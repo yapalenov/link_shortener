@@ -1,4 +1,4 @@
-import '../_bin/_env';
+import 'dotenv/config';
 import { Test, TestingModule } from '@nestjs/testing';
 import { LinkController, LinkDto } from './link.controller';
 import { LinkService } from './link.service';

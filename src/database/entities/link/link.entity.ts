@@ -2,10 +2,8 @@ import {
   Column,
   CreateDateColumn,
   Entity,
-  EntityRepository,
   Index,
   PrimaryGeneratedColumn,
-  Repository,
   UpdateDateColumn,
 } from 'typeorm';
 

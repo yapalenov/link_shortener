@@ -1,9 +1,7 @@
-import '../_bin/_env';
+import 'dotenv/config';
 import { Test, TestingModule } from '@nestjs/testing';
-import { LinkController, LinkDto } from './link.controller';
 import { LinkService } from './link.service';
 import { nanoid } from 'nanoid';
-import { CACHE_MANAGER, NotFoundException } from '@nestjs/common';
 import { getRepositoryToken } from '@nestjs/typeorm';
 import { Link } from '../database/entities/link/link.entity';
 import { Repository } from 'typeorm';

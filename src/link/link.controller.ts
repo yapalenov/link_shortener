@@ -1,10 +1,8 @@
 import {
   Body,
-  CACHE_MANAGER,
   CacheInterceptor,
   Controller,
   Get,
-  Inject,
   NotFoundException,
   Param,
   Post,
